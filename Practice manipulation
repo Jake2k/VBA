@@ -1,0 +1,634 @@
+Sub test()
+    Dim col As Integer
+    Dim row As Integer
+    Dim i As Integer
+    row = 4
+    col = 1
+    
+    While row < 100
+        Randomize
+        shtData.Cells(row, col).Value = Int((60 * Rnd) + 1)
+        col = col + 1
+            If col = 100 Then
+                row = row + 1
+                col = 1
+            End If
+    Wend
+           
+End Sub
+
+Sub randomSq()
+    Dim rrow As Integer
+    Dim rcol As Integer
+    Dim count As Integer
+    
+    While count < 500
+        Randomize
+        shtData.Cells(Int((100 * Rnd) + 1), Int((99 * Rnd) + 1)).Value = Int((60 * Rnd) + 1)
+        count = count + 1
+    Wend
+End Sub
+
+Sub pathfinder()
+    Dim row As Integer
+    Dim col As Integer
+    Dim count As Integer
+    Dim choice As Integer
+    Dim savechoice As Integer
+    
+    
+    count = 1
+        While count < 50
+
+        If count = 1 Then
+'            Randomize
+'            row = Int((100 * Rnd) + 1)
+'            col = Int((100 * Rnd) + 1)
+            row = 49
+            col = 50
+            shtData.Cells(row, col).Value = count
+            count = count + 1
+        Else
+            CreateChoice choice, savechoice
+
+    
+        If choice = 1 Then
+            Movement choice, row, col, count 'UP
+            count = count + 1
+            savechoice = 1
+            Else
+        If choice = 2 Then
+            Movement choice, row, col, count 'Right
+            count = count + 1
+            savechoice = 2
+            Else
+        If choice = 3 Then
+            Movement choice, row, col, count 'Down
+            count = count + 1
+            savechoice = 3
+            Else
+        If choice = 4 Then
+            Movement choice, row, col, count 'Left
+            count = count + 1
+            savechoice = 4
+            Else
+        End If
+        End If
+        End If
+        End If
+                                                     
+        End If
+    Wend
+End Sub
+
+Sub setHex()
+    Dim hex As String
+    Dim hash As String
+    Dim hashGen As String
+    Dim counter As Integer
+    
+    Dim hash1 As String
+    Dim hash2 As String
+    Dim hash3 As String
+    
+    Dim colour1 As String
+    Dim colour2 As String
+    Dim colour3 As String
+    Dim colour4 As String
+    Dim colour5 As String
+    Dim colour6 As String
+    Dim colour7 As String
+    Dim colour8 As String
+    Dim colour9 As String
+    Dim colour10 As String
+    Dim colour11 As String
+    Dim colour12 As String
+    Dim colour13 As String
+    Dim colour14 As String
+    Dim colour15 As String
+    Dim colour16 As String
+    Dim colour17 As String
+    Dim colour18 As String
+    Dim colour19 As String
+    Dim colour20 As String
+    Dim colour21 As String
+    Dim colour22 As String
+    Dim colour23 As String
+    Dim colour24 As String
+    Dim colour25 As String
+    Dim colour26 As String
+    Dim colour27 As String
+    Dim colour28 As String
+    Dim colour29 As String
+    Dim colour30 As String
+    
+    colour1 = "#0df688"
+    colour2 = "#3af27b"
+    colour3 = "#50ed6d"
+    colour4 = "#60e860"
+    colour5 = "#6ee453"
+    colour6 = "#7adf45"
+    colour7 = "#84da37"
+    colour8 = "#8ed527"
+    colour9 = "#97cf12"
+    colour10 = "#9fca00"
+    colour11 = "#a7c400"
+    colour12 = "#aebf00"
+    colour13 = "#b5b900"
+    colour14 = "#bcb300"
+    colour15 = "#c2ad00"
+    colour16 = "#c9a600"
+    colour17 = "#ce9f00"
+    colour18 = "#d49900"
+    colour19 = "#d99200"
+    colour20 = "#de8a00"
+    colour21 = "#e28300"
+    colour23 = "#e67b00"
+    colour24 = "#ea7200"
+    colour25 = "#ee6a00"
+    colour26 = "#f16000"
+    colour27 = "#f35600"
+    colour28 = "#f54c08"
+    colour29 = "#f74017"
+    colour30 = "#f83221"
+    
+    counter = 1
+    
+    hash1 = "TEST-FCF-9853"
+    hash2 = "TEST-FCF-1535"
+
+    
+    Debug.Print hashnum
+    For counter = 1 To 30
+        If colourFlag1 = 1 Then
+        Else
+        End If
+        If colourFlag2 = 1 Then
+        Else
+        End
+        
+    Next counter
+        
+    
+End Sub
+
+
+
+Sub randomHex()
+        Dim hex As String
+        Dim hash As String
+        Dim hashGen As Long
+        Dim i As Integer
+        Dim part1 As String
+        Dim part2 As String
+        Dim part3 As String
+        Dim part4 As String
+        Dim part5 As String
+        Dim part6 As String
+        
+        
+        Randomize
+        hash = "hgujhgtf"
+        
+        For i = 1 To Len(hash)
+           hashGen = Asc(Mid(hash, i, 1)) * i + hashGen
+           Next i
+        
+        Debug.Print "hashgen: " & hashGen
+        
+        part1 = Int((14 * Rnd) + 1)
+        part2 = Int((14 * Rnd) + 1)
+        part3 = Int((14 * Rnd) + 1)
+        part4 = Int((14 * Rnd) + 1)
+        part5 = Int((14 * Rnd) + 1)
+        part6 = Int((14 * Rnd) + 1)
+    
+        If part1 = 10 Then
+            part1 = "a"
+        Else
+        If part1 = 11 Then
+            part1 = "b"
+        Else
+        If part1 = 12 Then
+            part1 = "c"
+        Else
+        If part1 = 13 Then
+            part1 = "d"
+        Else
+        If part1 = 14 Then
+            part1 = "e"
+        Else
+        If part1 = 15 Then
+            part1 = "f"
+        Else
+        End If
+        End If
+        End If
+        End If
+        End If
+        End If
+        
+        If part2 = 10 Then
+            part2 = "a"
+        Else
+        If part2 = 11 Then
+            part2 = "b"
+        Else
+        If part2 = 12 Then
+            part2 = "c"
+        Else
+        If part2 = 13 Then
+            part2 = "d"
+        Else
+        If part2 = 14 Then
+            part2 = "e"
+        Else
+        If part2 = 15 Then
+            part2 = "f"
+        Else
+         End If
+        End If
+        End If
+        End If
+        End If
+        End If
+        
+        If part3 = 10 Then
+            part3 = "a"
+        Else
+        If part3 = 11 Then
+            part3 = "b"
+        Else
+        If part3 = 12 Then
+            part3 = "c"
+        Else
+        If part3 = 13 Then
+            part3 = "d"
+        Else
+        If part3 = 14 Then
+            part3 = "e"
+        Else
+        If part3 = 15 Then
+            part3 = "f"
+        Else
+         End If
+        End If
+        End If
+        End If
+        End If
+        End If
+        
+        If part4 = 10 Then
+            part4 = "a"
+        Else
+        If part4 = 11 Then
+            part4 = "b"
+        Else
+        If part4 = 12 Then
+            part4 = "c"
+        Else
+        If part4 = 13 Then
+            part4 = "d"
+        Else
+        If part4 = 14 Then
+            part4 = "e"
+        Else
+        If part4 = 15 Then
+            part4 = "f"
+        Else
+        
+         End If
+        End If
+        End If
+        End If
+        End If
+        End If
+        
+        If part5 = 10 Then
+            part5 = "a"
+        Else
+        If part5 = 11 Then
+            part5 = "b"
+        Else
+        If part5 = 12 Then
+            part5 = "c"
+        Else
+        If part5 = 13 Then
+            part5 = "d"
+        Else
+        If part5 = 14 Then
+            part5 = "e"
+        Else
+        If part5 = 15 Then
+            part5 = "f"
+        Else
+        
+         End If
+        End If
+        End If
+        End If
+        End If
+        End If
+        
+        
+        If part6 = 10 Then
+            part6 = "a"
+        Else
+        If part6 = 11 Then
+            part6 = "b"
+        Else
+        If part6 = 12 Then
+            part6 = "c"
+        Else
+        If part6 = 13 Then
+            part6 = "d"
+        Else
+        If part6 = 14 Then
+            part6 = "e"
+        Else
+        If part6 = 15 Then
+            part6 = "f"
+        Else
+        
+        End If
+        End If
+        End If
+        End If
+        End If
+        End If
+        
+        Debug.Print "part1:" & part1
+        Debug.Print "part2:" & part2
+        Debug.Print "part3:" & part3
+        Debug.Print "part4:" & part4
+        Debug.Print "part5:" & part5
+        Debug.Print "part6:" & part6
+        
+        hex = "#" & part1 & part2 & part3 & part4 & part5 & part6
+        
+        shtData.Cells(1, 1).Value = hex
+End Sub
+Sub CreateChoice(choice As Integer, savechoice As Integer)
+ReRoll:
+        Randomize
+        choice = Int((4 * Rnd) + 1)
+        
+        If choice = 1 And savechoice = 3 Then
+            GoTo ReRoll
+        Else
+        If choice = 2 And savechoice = 4 Then
+            GoTo ReRoll
+        Else
+        If choice = 3 And savechoice = 1 Then
+            GoTo ReRoll
+        Else
+        If choice = 4 And savechoice = 2 Then
+            GoTo ReRoll
+        Else
+        End If
+        End If
+        End If
+        End If
+End Sub
+Sub Movement(prmChoice As Integer, prmRow As Integer, prmCol As Integer, prmCount As Integer)
+    Debug.Print "ROW" & prmRow
+    Debug.Print "COL" & prmCol
+    Debug.Print "Choice" & prmChoice
+    Debug.Print "Count" & prmCount
+    Debug.Print ""
+    If prmChoice = 1 Then 'UP
+        prmRow = prmRow - 1
+        If shtData.Cells(prmRow, prmCol).Value = "" Then
+            shtData.Cells(prmRow, prmCol).Value = prmCount
+            Else
+        
+            End If
+        Else
+    If prmChoice = 2 Then 'Right
+        prmCol = prmCol + 1
+        If shtData.Cells(prmRow, prmCol).Value = "" Then
+            shtData.Cells(prmRow, prmCol).Value = prmCount
+            Else
+            
+            End If
+        Else
+    If prmChoice = 3 Then 'Down
+        prmRow = prmRow + 1
+        If shtData.Cells(prmRow, prmCol).Value = "" Then
+            shtData.Cells(prmRow, prmCol).Value = prmCount
+            Else
+           
+            End If
+        Else
+    If prmChoice = 4 Then 'Left
+        prmCol = prmCol - 1
+        If shtData.Cells(prmRow, prmCol).Value = "" Then
+            shtData.Cells(prmRow, prmCol).Value = prmCount
+            Else
+            
+            End If
+    End If
+    End If
+    End If
+    End If
+    
+End Sub
+
+
+Sub wave()
+    Dim row As Integer
+    Dim col As Integer
+    
+    row = 1
+    col = 1
+    
+    While col < 100
+        ColourSq row, col
+        col = col + 1
+        row = 1
+    Wend
+    
+End Sub
+
+Sub ColourSq(prmRow As Integer, prmCol As Integer)
+    Dim rowHeight As Integer
+    Dim i As Integer
+
+    rowHeight = prmCol
+    
+    For i = 1 To rowHeight
+        shtData.Cells(prmRow, prmCol).Value = prmCol
+        prmRow = prmRow + 1
+        Next i
+        
+    
+End Sub
+
+
+Sub Oscillation()
+  Dim row As Integer
+    Dim col As Integer
+    
+    row = 1
+    col = 1
+    
+    While col < 100
+        ColourSq2 row, col
+        col = col + 1
+        row = 1
+    Wend
+    
+End Sub
+
+Sub ColourSq2(prmRow As Integer, prmCol As Integer)
+    Dim rowHeight As Integer
+    Dim i As Integer
+
+    rowHeight = Int((20 * Rnd) + 1)
+    
+    For i = 1 To rowHeight
+        shtData.Cells(prmRow, prmCol).Value = prmCol
+        prmRow = prmRow + 1
+        Next i
+End Sub
+
+
+Sub dotToDot()
+    Dim row As Integer
+    Dim col As Integer
+    Dim row2 As Integer
+    Dim col2 As Integer
+    
+    Randomize
+    row = Int((99 * Rnd) + 1)
+    col = Int((99 * Rnd) + 1)
+  
+    shtData.Cells(row, col).Value = 1
+    
+ReRoll:
+    row2 = Int((99 * Rnd) + 1)
+    col2 = Int((99 * Rnd) + 1)
+   
+    If row2 = row Then
+    GoTo ReRoll
+    Else
+    End If
+
+    If col2 = col Then
+    GoTo ReRoll
+    Else
+    End If
+
+    shtData.Cells(row2, col2).Value = 100
+    CalculateMovement row, col, row2, col2
+    
+End Sub
+
+Sub CalculateMovement(prmRow As Integer, prmCol As Integer, prmRow2 As Integer, prmCol2 As Integer)
+    Dim rowMovement As Integer
+    Dim colMovement As Integer
+    Dim startPointRow As Integer
+    Dim startPointCol As Integer
+    Dim minusFlag As Integer
+    Dim startPointRowReverse As Integer
+    Dim flag As Integer
+    Dim flag2 As Integer
+    
+    If prmCol > prmCol2 And prmRow < prmRow2 Then
+        startPointRow = prmRow2
+        startPointCol = prmCol2
+        rowMovement = prmRow2 - prmRow - 1
+        colMovement = prmCol - prmCol2
+        Debug.Print "TEST TEST TEST"
+        
+        startPointRowReverse = prmRow
+        flag = 1
+        flag2 = 1
+        
+    Else
+    End If
+    
+    
+    If prmRow > prmRow2 Then
+        rowMovement = prmRow - prmRow2 'UP
+        startPointRow = prmRow2
+    Else
+        rowMovement = prmRow2 - prmRow 'DOWN
+        startPointRow = prmRow
+    End If
+    
+    If prmCol > prmCol2 Then
+        colMovement = prmCol - prmCol2 'RIGHT
+        startPointCol = prmCol2
+    Else
+        colMovement = prmCol2 - prmCol - 1 'RIGHT
+        startPointCol = prmCol
+    End If
+    
+    Debug.Print "RowMovement:" & rowMovement & " startPointRow:" & startPointRow
+    Debug.Print "ColMovement:" & colMovement & " startPointCol:" & startPointCol
+    
+    Drawline rowMovement, colMovement, startPointCol, startPointRow, startPointRowReverse, flag, flag2
+    
+End Sub
+
+Sub Drawline(prmRowMovement As Integer, prmColMovement As Integer, prmStartPointCol As Integer, prmStartPointRow As Integer, prmStartPointRowReverse As Integer, prmFlag As Integer, prmFlag2 As Integer)
+    Dim i As Integer
+    
+    For i = 1 To prmRowMovement
+        If prmFlag2 = 1 Then
+        prmStartPointRow = prmStartPointRow - 1
+        prmFlag2 = 0
+        Else
+        End If
+        
+        prmStartPointRow = prmStartPointRow + 1
+        
+        shtData.Cells(prmStartPointRow, prmStartPointCol).Value = 69
+    Next i
+    
+   
+    
+    For i = 0 To prmColMovement - 1
+        If prmFlag = 1 Then
+            prmStartPointRow = prmStartPointRowReverse
+            prmStartPointCol = prmStartPointCol - 1
+            prmFlag = 0
+        Else
+        End If
+        
+        prmStartPointCol = prmStartPointCol + 1
+        shtData.Cells(prmStartPointRow, prmStartPointCol).Value = 69
+            
+    Next i
+    
+  
+    
+End Sub
+
+Private Function CalculateValues(prmOperator As String, prmVal1 As Double, prmVal2 As Double) As Double
+    
+Select Case prmOperator
+    Case "x"
+        CalculateValues = (prmVal1 * prmVal2)
+    Case "+"
+        CalculateValues = (prmVal1 + prmVal2)
+    Case "-"
+        CalculateValues = (prmVal1 - prmVal2)
+    Case Else
+        CalculateValues = 0
+End Select
+    
+End Function
+
+Sub CardShuffler()
+    Dim deck As Integer
+    Dim row As Integer
+    Dim col As Integer
+    
+    deck = 52
+    
+    
+End Sub
+
+
